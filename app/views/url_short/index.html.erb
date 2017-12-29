@@ -1,0 +1,12 @@
+<p>My shortened urls</p>
+<ul>
+<% @urls.each do |url| %>
+  <li style="text-decoration: none"> <label for="">Original URL</label>
+  <%= url.long_url %>
+  <label for="">Short URL</label>
+  <%= link_to url.short_url, url %></li>
+  <hr>
+<% end %>
+
+</ul>
+<%= link_to "New Short URL", url_short_new_url %>
